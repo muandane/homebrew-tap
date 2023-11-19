@@ -5,11 +5,11 @@
 class Cloudcost < Formula
   desc ""
   homepage "https://github.com/muandane/homebrew-tap"
-  version "0.0.2-rc1"
+  version "0.0.2"
 
   on_macos do
-    url "https://github.com/muandane/cloudcost/releases/download/v0.0.2-rc1/cloudcost_0.0.2-rc1_Darwin_all.tar.gz"
-    sha256 "169607dfa46b4a822baadda8ed7a4e175217d059d3be673a2c788e64ac40f919"
+    url "https://github.com/muandane/cloudcost/releases/download/v0.0.2/cloudcost_0.0.2_Darwin_all.tar.gz"
+    sha256 "f9588f2ed64803de5429d42bd4051ec8cf81169bdc1f7f171adca0d86c78184d"
 
     def install
       bin.install "cloudcost"
@@ -21,8 +21,8 @@ class Cloudcost < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/muandane/cloudcost/releases/download/v0.0.2-rc1/cloudcost_0.0.2-rc1_Linux_arm64.tar.gz"
-      sha256 "a2e4f8b256bc5f59e16474789fc6cb96973e93966e241a49241f3cc32ed04da4"
+      url "https://github.com/muandane/cloudcost/releases/download/v0.0.2/cloudcost_0.0.2_Linux_arm64.tar.gz"
+      sha256 "83d48a1b87334338d85789acc4ad5926c73569de05d50a5511bafe463ddad6e8"
 
       def install
         bin.install "cloudcost"
@@ -32,8 +32,8 @@ class Cloudcost < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/muandane/cloudcost/releases/download/v0.0.2-rc1/cloudcost_0.0.2-rc1_Linux_x86_64.tar.gz"
-      sha256 "0460c9067c8d4d6b167b0d7f6f33296b61518ba0fa4217cade6bf5cd43595fc6"
+      url "https://github.com/muandane/cloudcost/releases/download/v0.0.2/cloudcost_0.0.2_Linux_x86_64.tar.gz"
+      sha256 "78fde8845ff5ec6f47924209bf6d485f28b23e4bfd51f3c93f6c289390feb2d8"
 
       def install
         bin.install "cloudcost"
