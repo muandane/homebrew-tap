@@ -9,7 +9,7 @@ class Cloudcost < Formula
 
   on_macos do
     url "https://github.com/muandane/cloudcost/releases/download/v0.0.2/cloudcost_0.0.2_Darwin_all.tar.gz"
-    sha256 "f9588f2ed64803de5429d42bd4051ec8cf81169bdc1f7f171adca0d86c78184d"
+    sha256 "df8b4d0d572a82e8fe6f7399dde5c304a434c99e2808f264fe2c22ae170b83bc"
 
     def install
       bin.install "cloudcost"
@@ -22,7 +22,7 @@ class Cloudcost < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/muandane/cloudcost/releases/download/v0.0.2/cloudcost_0.0.2_Linux_arm64.tar.gz"
-      sha256 "83d48a1b87334338d85789acc4ad5926c73569de05d50a5511bafe463ddad6e8"
+      sha256 "fd514cc5a6d8d91a8ad7e9ebf6f4754656f2681f5179f040450457b9edcb75cc"
 
       def install
         bin.install "cloudcost"
@@ -33,7 +33,7 @@ class Cloudcost < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/muandane/cloudcost/releases/download/v0.0.2/cloudcost_0.0.2_Linux_x86_64.tar.gz"
-      sha256 "78fde8845ff5ec6f47924209bf6d485f28b23e4bfd51f3c93f6c289390feb2d8"
+      sha256 "fb8af398e5096b5207e5fd5986782fd66a181a9d0305c213556450c197925a55"
 
       def install
         bin.install "cloudcost"
