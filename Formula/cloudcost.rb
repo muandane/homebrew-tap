@@ -5,41 +5,41 @@
 class Cloudcost < Formula
   desc ""
   homepage "https://github.com/muandane/homebrew-tap"
-  version "0.0.2"
+  version "0.0.2-rc1"
 
   on_macos do
-    url "https://github.com/muandane/cloudcost/releases/download/v0.0.2/cloudcost_0.0.2_Darwin_all.tar.gz"
-    sha256 "a3bca78351ff4951b173c01f964e28efe24a8fbcb5035f352b553ae1ea648669"
+    url "https://github.com/muandane/cloudcost/releases/download/v0.0.2-rc1/cloudcost_0.0.2-rc1_Darwin_all.tar.gz"
+    sha256 "169607dfa46b4a822baadda8ed7a4e175217d059d3be673a2c788e64ac40f919"
 
     def install
       bin.install "cloudcost"
-      bash_completion.install "completions/goji.bash" => "goji"
-      zsh_completion.install "completions/goji.zsh" => "_goji"
-      fish_completion.install "completions/goji.fish"
+      bash_completion.install "completions/cloudcost.bash" => "cloudcost"
+      zsh_completion.install "completions/cloudcost.zsh" => "_cloudcost"
+      fish_completion.install "completions/cloudcost.fish"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/muandane/cloudcost/releases/download/v0.0.2/cloudcost_0.0.2_Linux_arm64.tar.gz"
-      sha256 "d8c445196da4b5156ab0a08b773e7c14f0391a3390f2b8ad294dfabee892a1be"
+      url "https://github.com/muandane/cloudcost/releases/download/v0.0.2-rc1/cloudcost_0.0.2-rc1_Linux_arm64.tar.gz"
+      sha256 "a2e4f8b256bc5f59e16474789fc6cb96973e93966e241a49241f3cc32ed04da4"
 
       def install
         bin.install "cloudcost"
-        bash_completion.install "completions/goji.bash" => "goji"
-        zsh_completion.install "completions/goji.zsh" => "_goji"
-        fish_completion.install "completions/goji.fish"
+        bash_completion.install "completions/cloudcost.bash" => "cloudcost"
+        zsh_completion.install "completions/cloudcost.zsh" => "_cloudcost"
+        fish_completion.install "completions/cloudcost.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/muandane/cloudcost/releases/download/v0.0.2/cloudcost_0.0.2_Linux_x86_64.tar.gz"
-      sha256 "fb9f45e8c99b162ced0751950215330964137e8c0d287185669f8530317af84c"
+      url "https://github.com/muandane/cloudcost/releases/download/v0.0.2-rc1/cloudcost_0.0.2-rc1_Linux_x86_64.tar.gz"
+      sha256 "0460c9067c8d4d6b167b0d7f6f33296b61518ba0fa4217cade6bf5cd43595fc6"
 
       def install
         bin.install "cloudcost"
-        bash_completion.install "completions/goji.bash" => "goji"
-        zsh_completion.install "completions/goji.zsh" => "_goji"
-        fish_completion.install "completions/goji.fish"
+        bash_completion.install "completions/cloudcost.bash" => "cloudcost"
+        zsh_completion.install "completions/cloudcost.zsh" => "_cloudcost"
+        fish_completion.install "completions/cloudcost.fish"
       end
     end
   end
