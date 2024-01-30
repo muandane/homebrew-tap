@@ -10,38 +10,41 @@ class Goji < Formula
   depends_on "git"
 
   on_macos do
-    url "https://github.com/muandane/goji/archive/refs/tags/v0.0.7.tar.gz"
-    sha256 "b7957a5f85caef53be163c80cbf57837fe15517776e9a756dcaeb0d86a3981c8"
+    url "https://github.com/muandane/goji/releases/download/v0.0.7/goji_0.0.7_Darwin_all.tar.gz"
+    sha256 "c4d4f168b432174e29618c739820a0b7c6cde9859daa6d51b8a2610ea30c0dc3"
 
     def install
       bin.install "goji"
       bash_completion.install "completions/goji.bash" => "goji"
       zsh_completion.install "completions/goji.zsh" => "_goji"
       fish_completion.install "completions/goji.fish"
+      man1.install "manpages/goji.1.gz"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/muandane/goji/releases/download/v0.0.6/goji_0.0.6_Linux_arm64.tar.gz"
-      sha256 "87949eb554022889b6fcd0ae31924a575374fff0986864ce66ed62889df8852d"
+      url "https://github.com/muandane/goji/releases/download/v0.0.7/goji_0.0.7_Linux_arm64.tar.gz"
+      sha256 "8e649a4603de6313b2fabf7e54a3baac8478b9afeda1f3e340b6dedb746b1551"
 
       def install
         bin.install "goji"
         bash_completion.install "completions/goji.bash" => "goji"
         zsh_completion.install "completions/goji.zsh" => "_goji"
         fish_completion.install "completions/goji.fish"
+        man1.install "manpages/goji.1.gz"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/muandane/goji/releases/download/v0.0.6/goji_0.0.6_Linux_x86_64.tar.gz"
-      sha256 "425713bb79427f76ecaa7335b9d91ff1f9a3c5328ad6ad78861d2108dd63ef53"
+      url "https://github.com/muandane/goji/releases/download/v0.0.7/goji_0.0.7_Linux_x86_64.tar.gz"
+      sha256 "c8046cc7346f70875960fe4c8b56022bf55105878b43e222eb94ff2481544ce7"
 
       def install
         bin.install "goji"
         bash_completion.install "completions/goji.bash" => "goji"
         zsh_completion.install "completions/goji.zsh" => "_goji"
         fish_completion.install "completions/goji.fish"
+        man1.install "manpages/goji.1.gz"
       end
     end
   end
