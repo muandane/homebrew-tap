@@ -5,13 +5,13 @@
 class Goji < Formula
   desc ""
   homepage "https://github.com/muandane/homebrew-tap"
-  version "0.0.8"
+  version "0.1.0"
 
   depends_on "git"
 
   on_macos do
-    url "https://github.com/muandane/goji/releases/download/v0.0.8/goji_v0.0.8_Darwin_all.tar.gz"
-    sha256 "a403db5dbe8572a8298e8e9cf1f93a2f6f4b3dabb08afe3001f3b3e9910cbba1"
+    url "https://github.com/muandane/goji/archive/refs/tags/v0.1.0.tar.gz"
+    sha256 "00b95d773b16cd0dbe7e044062635aaf2a6f852322c506279cdae2eb91f8b307"
 
     def install
       bin.install "goji"
