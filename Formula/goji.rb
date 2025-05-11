@@ -10,8 +10,8 @@ class Goji < Formula
   depends_on "git"
 
   on_macos do
-    url "https://github.com/muandane/goji/archive/refs/tags/v0.1.4.tar.gz"
-    sha256 "29901a9150e6f53033eed63763be67bded03acd0148a57659fd3570a11ad1452"
+    url "https://github.com/muandane/goji/releases/download/v0.1.4/goji_v0.1.4_Darwin_all.tar.gz"
+    sha256 "8adb20245833c787f1466d8960798b0bfbe87b2f87650cff8492da100fbd48f9"
 
     def install
       bin.install "goji"
@@ -23,32 +23,26 @@ class Goji < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/muandane/goji/releases/download/v0.1.3/goji_v0.1.3_Linux_x86_64.tar.gz"
-        sha256 "03824bc7feb4ced95902ec8a09c8f869452a3aeaaad5395e01dc9ee229d15a1d"
-
-        def install
-          bin.install "goji"
-          bash_completion.install "completions/goji.bash" => "goji"
-          zsh_completion.install "completions/goji.zsh" => "_goji"
-          fish_completion.install "completions/goji.fish"
-          man1.install "manpages/goji.1.gz"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/muandane/goji/releases/download/v0.1.4/goji_v0.1.4_Linux_x86_64.tar.gz"
+      sha256 "a454ded3fe71a7ae1bada32b933f47727fe4d92c4f4a51879e09e4f9aff943d2"
+      def install
+        bin.install "goji"
+        bash_completion.install "completions/goji.bash" => "goji"
+        zsh_completion.install "completions/goji.zsh" => "_goji"
+        fish_completion.install "completions/goji.fish"
+        man1.install "manpages/goji.1.gz"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/muandane/goji/releases/download/v0.1.3/goji_v0.1.3_Linux_arm64.tar.gz"
-        sha256 "442d0bcb0781d8f5a68744308961bdb6f768e5a5baffb24db3f96bf8eb0b61df"
-
-        def install
-          bin.install "goji"
-          bash_completion.install "completions/goji.bash" => "goji"
-          zsh_completion.install "completions/goji.zsh" => "_goji"
-          fish_completion.install "completions/goji.fish"
-          man1.install "manpages/goji.1.gz"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/muandane/goji/releases/download/v0.1.4/goji_v0.1.4_Linux_arm64.tar.gz"
+      sha256 "f3143ba88170adfd6ce61b40b3272d34e2cc352111f66cafb047d86344317fff"
+      def install
+        bin.install "goji"
+        bash_completion.install "completions/goji.bash" => "goji"
+        zsh_completion.install "completions/goji.zsh" => "_goji"
+        fish_completion.install "completions/goji.fish"
+        man1.install "manpages/goji.1.gz"
       end
     end
   end
