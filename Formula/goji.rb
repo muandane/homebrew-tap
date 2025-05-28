@@ -5,13 +5,13 @@
 class Goji < Formula
   desc "Commitizen-like Emoji Commit Tool written in Go"
   homepage "https://github.com/muandane/homebrew-tap"
-  version "0.1.6-rc2"
+  version "0.1.6"
 
   depends_on "git"
 
   on_macos do
-    url "https://github.com/muandane/goji/releases/download/v0.1.6-rc2/goji_v0.1.6-rc2_Darwin_all.tar.gz"
-    sha256 "e21a568386a0e0d132bb9f8bc35d8a81182def31f08bf37bf0b518da549fba2d"
+    url "https://github.com/muandane/goji/archive/refs/tags/v0.1.6.tar.gz"
+    sha256 "d737e28fc94c5ba87baf3603629ff94d19f318bab79396e88f37b9d43e4dfb30"
 
     def install
       bin.install "goji"
