@@ -10,8 +10,8 @@ class Goji < Formula
   depends_on "git"
 
   on_macos do
-    url "https://github.com/muandane/goji/archive/refs/tags/v0.1.7.tar.gz"
-    sha256 "ba34ba88db87e82d09b270a69f0503910e7ffbf6eff422285f2d99bf852bac76"
+    url "https://github.com/muandane/goji/releases/download/v0.1.7/goji_v0.1.7_Darwin_all.tar.gz"
+    sha256 "e5e8bd8d7000bce5e95edc9bd3d87ee5b22a0ddb0b2a52f9db77de46376b432f"
 
     def install
       bin.install "goji"
@@ -23,9 +23,9 @@ class Goji < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/muandane/goji/releases/download/v0.1.6/goji_v0.1.6_Linux_x86_64.tar.gz"
-      sha256 "23e290c1aefad8caa5e704621a6c836c0a86c263c22d13c5e29800eff9f48039"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/muandane/goji/releases/download/v0.1.7/goji_v0.1.7_Linux_x86_64.tar.gz"
+      sha256 "4b98aba16f420b8152b2e6efe7c43bcfe62eddf69e5033b60b546b417fa16569"
       def install
         bin.install "goji"
         bash_completion.install "completions/goji.bash" => "goji"
@@ -34,9 +34,9 @@ class Goji < Formula
         man1.install "manpages/goji.1.gz"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/muandane/goji/releases/download/v0.1.6/goji_v0.1.6_Linux_arm64.tar.gz"
-      sha256 "55cfae0577e5d073faea94f555ab3be50696aede1fb17cd38ef2146bf9816b1d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/muandane/goji/releases/download/v0.1.7/goji_v0.1.7_Linux_arm64.tar.gz"
+      sha256 "66acc4c37bc1610543c621159d227c7e51d0de9f009372952afd4c6ed49f5de5"
       def install
         bin.install "goji"
         bash_completion.install "completions/goji.bash" => "goji"
