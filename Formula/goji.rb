@@ -15,18 +15,18 @@ cask "goji" do
     ]
 
   on_macos do
-    url "https://github.com/muandane/goji/archive/refs/tags/v0.2.0.tar.gz"
-    sha256 "adfa5350ea28cbe7eb962a035d95d28f0ee1121b5b111b6f257199f868981902"
+    url "https://github.com/muandane/goji/releases/download/v#{version}/goji_v#{version}_Darwin_all.tar.gz"
+    sha256 "6273302165d2133881a62d6fc8265b2ae2eb55b4b8ef700b90679e544ef0a15b"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/muandane/goji/releases/download/v#{version}/goji_v#{version}_Linux_x86_64.tar.gz"
-      sha256 "8ce76544c6d5c1e50bbcbf119a9403db364425dc6e41e68e64d93560d9e3bbcb"
+      sha256 "e431be261d4e394e0a1bdb0e1260e320b0717f163a1519d6cef71c0d13e63ffd"
     end
     on_arm do
       url "https://github.com/muandane/goji/releases/download/v#{version}/goji_v#{version}_Linux_arm64.tar.gz"
-      sha256 "77b39520c5fc56434c25a463fd545b3498829edb4768ed04955937394f7d1fb3"
+      sha256 "b156e60db432eeaa183de06af087381bb8519f0231b050b03ee960697a724671"
     end
   end
 
