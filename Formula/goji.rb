@@ -3,7 +3,7 @@ cask "goji" do
   name "goji"
   desc "Commitizen-like Emoji Commit Tool written in Go"
   homepage "https://github.com/muandane/homebrew-tap"
-  version "0.1.9"
+  version "0.2.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,8 +15,8 @@ cask "goji" do
     ]
 
   on_macos do
-    url "https://github.com/muandane/goji/releases/download/v#{version}/goji_v#{version}_Darwin_all.tar.gz"
-    sha256 "0e21cc14f8b9f98fe3795abafceeaf82c307ebb24cfb7724911273009586ecac"
+    url "https://github.com/muandane/goji/archive/refs/tags/v0.2.0.tar.gz"
+    sha256 "adfa5350ea28cbe7eb962a035d95d28f0ee1121b5b111b6f257199f868981902"
   end
 
   on_linux do
